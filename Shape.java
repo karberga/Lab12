@@ -1,3 +1,6 @@
+import java.awt.Color;
+import java.awt.Point;
+
 /**
  * 
  */
@@ -6,7 +9,30 @@
  * @author grant
  *
  */
-public class Shape
+public abstract class Shape implements Drawable
 {
+    protected Point[] location;
+    private Color color;
+    private boolean filled;
 
+    Shape(Color color, boolean filled)
+    {
+        this.color = color;
+        this.filled = filled;
+    }
+
+    public Color getColor()
+    {
+        return color;
+    }
+
+    public boolean isFilled()
+    {
+        return filled;
+    }
+
+    public Point[] getLocation()
+    {
+        return location;
+    }
 }
