@@ -22,24 +22,28 @@ public class Rectangle extends Polygon
      */
     public Rectangle(Point center, int width, int height, Color color, boolean filled)
     {
-        super.paintComponent(g);
-        g.setColor(Color.BLACK);
+        super(color, filled);
         
-        int startX = center - width/2;
-        int startY = center - height/2;
+        // coordinates for first point
+        int point1X = center.x - width/2;
+        int point1Y = center.y - height/2;
         
-        int endX = center + width/2;
-        int endY = center + height/2;
+        // coordinates for second point
+        int point2X = center.x - width/2;
+        int point2Y = center.y + height/2;
         
-        g.drawRect(startX, startY, endX, endY);
+        // coordinates for third point
+        int point3X = center.x + width/2;
+        int point3Y = center.y + height/2;
         
-        startX += 30;
-        startY += 30;
+        // coordinates for forth point
+        int point4X = center.x + width/2;
+        int point4Y = center.y - height/2;
         
-        endX += 30;
-        endY += 30;
-        
-        g.setColor(Color.RED);
-        g.fillRect(startX, startY, endX, endY);
+        super.location = new Point[4];
+        location[0] = new Point(point1X, point1Y);
+        location[1] = new Point(point2X, point2Y);
+        location[2] = new Point(point3X, point3Y);
+        location[3] = new Point(point4X, point4Y);
     }
 }

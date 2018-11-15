@@ -25,6 +25,15 @@ public class RightTriangle extends Polygon
      */
     public RightTriangle(Point pointRightAngle, int base, int height, Color color, boolean filled)
     {
-        // TODO: implement this
+        super(color, filled);
+        
+        super.location = new Point[3];
+        
+        Point basePoint = new Point(pointRightAngle.x + base, pointRightAngle.y);
+        Point heightPoint = new Point(pointRightAngle.x, pointRightAngle.y + height);
+        
+        location[0] = pointRightAngle;
+        location[1] = basePoint;
+        location[2] = heightPoint;
     }
 }
