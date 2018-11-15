@@ -40,7 +40,7 @@ public class DrawPanel extends JPanel
         super.paintComponent(graphics);
         
         for (Shape shape : shapeList) {
-            shape.draw();
+            shape.draw(graphics);
         }
     }
 }

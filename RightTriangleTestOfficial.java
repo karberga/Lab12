@@ -2,9 +2,6 @@
 import java.awt.Color;
 import java.awt.Point;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 /**
  * Test cases for the Triangle
  * 
