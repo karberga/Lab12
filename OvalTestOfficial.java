@@ -33,19 +33,10 @@ public class OvalTestOfficial
         Assert.assertEquals("Quantity of points defining the Circle is more than 1", 1, c2.getLocation().length);
 
         // Verify the location for each shape
-        // TODO: implement this.
-
-        // Verify the colors for each shape
-        Assert.assertEquals("Incorrect color for the Oval", Color.BLACK, o1.getColor());
-        Assert.assertEquals("Incorrect color for the Oval", Color.CYAN, o2.getColor());
-        Assert.assertEquals("Incorrect color for the Circle", Color.BLUE, c1.getColor());
-        Assert.assertEquals("Incorrect color for the Circle", Color.RED, c2.getColor());
-        
-        // Verify the appropriate filled flag for each shape
-        Assert.assertTrue("Incorrect flag for filled for the Oval", o1.isFilled());
-        Assert.assertFalse("Incorrect flag for filled for the Oval", o2.isFilled());
-        Assert.assertTrue("Incorrect flag for filled for the Circle", c1.isFilled());
-        Assert.assertFalse("Incorrect flag for filled for the Circle", c2.isFilled());
+        Assert.assertEquals(new Point(100, 100), o1.getLocation()[0]);
+        Assert.assertEquals(new Point(100, 100), o2.getLocation()[0]);
+        Assert.assertEquals(new Point(200, 300), c1.getLocation()[0]);
+        Assert.assertEquals(new Point(200, 300), c2.getLocation()[0]);
         
         // Verify the diameter(s) are correctly set
         Assert.assertEquals("Incorrect diameter1 for the Oval", 50, o1.getDiameter1());
@@ -62,5 +53,19 @@ public class OvalTestOfficial
         Assert.assertEquals("Incorrect diameter2 for the Circle", 75, c2.getDiameter2());
     }
     
-    // TODO: test color and fill in constructor.
+    @Test
+    public void testOvalColorAndFill()
+    {
+     // Verify the colors for each shape
+        Assert.assertEquals("Incorrect color for the Oval", Color.BLACK, o1.getColor());
+        Assert.assertEquals("Incorrect color for the Oval", Color.CYAN, o2.getColor());
+        Assert.assertEquals("Incorrect color for the Circle", Color.BLUE, c1.getColor());
+        Assert.assertEquals("Incorrect color for the Circle", Color.RED, c2.getColor());
+        
+        // Verify the appropriate filled flag for each shape
+        Assert.assertTrue("Incorrect flag for filled for the Oval", o1.isFilled());
+        Assert.assertFalse("Incorrect flag for filled for the Oval", o2.isFilled());
+        Assert.assertTrue("Incorrect flag for filled for the Circle", c1.isFilled());
+        Assert.assertFalse("Incorrect flag for filled for the Circle", c2.isFilled());
+    }
 }
